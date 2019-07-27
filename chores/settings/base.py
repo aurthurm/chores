@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SETTINGS_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(SETTINGS_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'chores.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,6 +116,32 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+# When Vue Builds, path will be `/static/css/...` so we will have Django Serve
+# In Production, it's recommended use an alternative approach such as:
+# http://whitenoise.evans.io/en/stable/django.html?highlight=django
+
+MIDDLEWARE_CLASSES = (
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+)
 
 STATIC_URL = '/static/'
+# # Place static in the same location as webpack build files
+# STATIC_ROOT = os.path.join(BASE_DIR, 'dist', 'static')
+# STATICFILES_DIRS = []
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+   os.path.join(BASE_DIR, 'dist', 'static'),
+]
+
+##########
+# STATIC #
+##########
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Insert Whitenoise Middleware at top but below Security Middleware
+# MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware',)
+# http://whitenoise.evans.io/en/stable/django.html#make-sure-staticfiles-is-configured-correctly
