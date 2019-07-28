@@ -33,7 +33,7 @@ import {
   mdbDropdownItem, } from 'mdbvue';
 
 export default {
-  name: 'app',
+  name: 'maninavigation',
   components: {
     mdbNavbar,
     mdbNavItem,
