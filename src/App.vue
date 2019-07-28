@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <main-navigation></main-navigation>
+    <navigation />
     <router-view />
   </div>
 </template>
 
 <script>
-import MainNavigation from '@/components/MainNavigation.vue'
+import Navigation from '@/components/Navigation.vue'
 export default {
   components: {
-    MainNavigation
+    Navigation: Navigation
   }
 }
 </script>
@@ -22,14 +22,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.nav-spacer {
+  margin-top: 56px;
 }
 </style>
