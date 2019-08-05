@@ -1,6 +1,6 @@
 module.exports = {
 	outputDir: 'dist',
-    assetsDir: 'static',
+  assetsDir: 'static',
     // baseUrl: IS_PRODUCTION
     // ? 'http://cdn123.com'
     // : '/',
@@ -17,10 +17,10 @@ module.exports = {
     //   }
     // },
 	configureWebpack: {
-		resolve: {
-		  alias: {
-		    'vue$': 'vue/dist/vue.esm.js'
-		  }
+    resolve: {
+			alias: {
+				'vue$': 'vue/dist/vue.esm.js'
+			}
 		}
 	}
-}
+};

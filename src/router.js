@@ -14,13 +14,35 @@ export default new Router({
       component: Home
     },
     {
+      path: "/chores",      
+      component: () => import("./views/Chores.vue"),
+      children: [
+        { path: "", name: "chores", component: () => import("./components/chores/chores.vue")},
+        { path: "chore/:choreId/detail", name: "choreDetail", component: () => import("./components/chores/choreDetail.vue")}
+      ]
+    },
+    {
+      path: "/handlers",
+      name: "handlers",
+      component: () => import("./views/Handlers.vue")
+    },
+    {
       path: "/about",
       name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/About.vue")
+        import("./views/About.vue")
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      component: () =>
+        import("./views/Profile.vue")
+    },
+    {
+      path: "/dashboard",
+      name: "dashboard",
+      component: () =>
+        import("./views/Dashboard.vue")
     }
   ]
 });

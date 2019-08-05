@@ -25,4 +25,11 @@ export default {
 .nav-spacer {
   margin-top: 56px;
 }
+.rgba-gradient {
+  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.rgba-gradient-success {
+  background-image: linear-gradient(to right, rgba(0, 200, 81, 0.5),rgba(0, 200, 81, 1), rgba(0, 200, 81, 0.5));
+}
+
 </style>
