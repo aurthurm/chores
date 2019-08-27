@@ -12,7 +12,7 @@
         <!-- Tab panes -->
         <div class="tab-content col-10">
         <div class="tab-pane active" id="projects" role="tabpanel">
-            <h3>Your Current Projects</h3>
+            <projects></projects>
         </div>
         <div class="tab-pane" id="profile" role="tabpanel">
             Cupidatat quis ad sint excepteur laborum in esse qui
@@ -29,7 +29,18 @@
 </template>
 
 <script>
-export default {
-    
-}
+    import Projects from '@/components/dashboard/projects.vue';
+    export default {
+        components: {
+          Projects,
+        }
+    }
 </script>
+
+<style scoped>
+    a.active {
+        background-color: #00C851!important;
+        color: #ffffff!important;
+        border-color:  #00C851!important;
+    }
+</style>

@@ -50,4 +50,8 @@ export default {
     -webkit-box-shadow: 0 0 0;
     box-shadow: 0 0 0 ;
 } */
+  a.dropdown-item::hover {
+    background-color: #00C851!important;
+    color: #FFFFFF;
+  }
 </style>
