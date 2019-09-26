@@ -18,7 +18,8 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique est atque quasi repellat. Enim quis illo totam tempora inventore minus sapiente officiis rem molestias fugiat, eius placeat cumque facilis doloribus!</p>
             </article>
             <hr>
-            <button class="btn btn-sm-outline btn-success" data-toggle="modal" data-target="#placeBid">Place a Bid</button>
+            <button class="btn btn-sm-outline btn-success mr-5" data-toggle="modal" data-target="#placeBid">Place a Bid</button>
+            <button class="btn btn-sm-outline btn-warning" data-toggle="modal" data-target="#placeReview">leave a Review</button>
         </section>
         <section class="container">
             <hr>
@@ -42,8 +43,12 @@
         </section>
         <!-- Bid Modal -->
         <place-bid
-            :showModal="showModal" 
+            :showBidModal="showBidModal" 
         ></place-bid>
+        <!-- review Modal -->
+        <place-review
+            :showReviewModal="showReviewModal" 
+        ></place-review>
     </div>
 </template>
 
@@ -53,10 +58,12 @@
 import Hero from "@/components/chores/hero.vue";
 import Chore from "@/components/chores/chore.vue";
 import placeBid from '@/components/chores/placeBid.vue'
+import placeReview from '@/components/chores/placeReview.vue'
 export default {    
     data(){
         return {
-            showModal: false,
+            showBidModal: false,
+            showReviewModal: false,
             chores:[
                 {
                 title: "Need Help Gardening",
@@ -97,7 +104,8 @@ export default {
     components: {
         Hero,
         Chore,
-        placeBid
+        placeBid,
+        placeReview
     }
 }
 </script>

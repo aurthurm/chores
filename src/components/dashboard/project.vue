@@ -25,6 +25,7 @@
                                 :_progress="task._progress"
                                 :asigned="task.asigned"
                                 :msgs="task.msgs"
+                                :key="task.dueDate"
                         ></chore-task>
                     </tbody>
                 </table>

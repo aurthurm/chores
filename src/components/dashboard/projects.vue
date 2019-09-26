@@ -1,6 +1,6 @@
 <template>
     <div class="text-left">
-        <h3>Projects</h3>
+        <h3>Client Projects</h3>
         <hr>
 
         <!--Accordion wrapper-->
@@ -12,6 +12,7 @@
                         :projectName="project.projectName"
                         :projectID="project.projectID"
                         :tasks="project.tasks"
+                        :key="project.projectName"
                 >
                 </project>
             <!-- Accordion card -->

@@ -8,18 +8,18 @@
         <section class="container">
         <div class="card-columns">
             <chore
-            v-for="_chore in chores"
-            :title="_chore.title"
-            :location="_chore.location"
-            :dateTime="_chore.dateTime"
-            :message="_chore.message"
-            :budget="_chore.budget"
-            :posted="_chore.posted"
-            :bids="_chore.bids"
-            :status="_chore.status"
-            :choreId="_chore.choreId"
-            :key="_chore.title"
-            ></chore>
+                v-for="_chore in chores"
+                :title="_chore.title"
+                :location="_chore.location"
+                :dateTime="_chore.dateTime"
+                :message="_chore.message"
+                :budget="_chore.budget"
+                :posted="_chore.posted"
+                :bids="_chore.bids"
+                :status="_chore.status"
+                :choreId="_chore.choreId"
+                :key="_chore.title"
+                ></chore>
         </div>
         </section>
     </div>

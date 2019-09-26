@@ -15,7 +15,7 @@
             <projects></projects>
         </div>
         <div class="tab-pane" id="profile" role="tabpanel">
-            Cupidatat quis ad sint excepteur laborum in esse qui
+            <d-chores></d-chores>
         </div>
         <div class="tab-pane" id="messages" role="tabpanel">
             Ut ut do pariatur aliquip aliqua aliquip exercitation 
@@ -30,9 +30,11 @@
 
 <script>
     import Projects from '@/components/dashboard/projects.vue';
+    import DChores from '@/components/dashboard/chores.vue';
     export default {
         components: {
           Projects,
+          DChores,
         }
     }
 </script>

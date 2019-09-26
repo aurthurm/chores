@@ -8,12 +8,10 @@
         <!--Grid row-->
         <div class="row">
           <!--Grid column-->
-          <div class="col text-center text-md-left mt-xl-5 mb-5" >
-            <h1 class="h1-responsive font-weight-bold mt-sm-5">Who is CHORES</h1>
+          <div class="col text-center mt-xl-5 mb-5 text-white" >
+            <h1 class="h1-responsive font-weight-bold mt-sm-5">CHORES ?</h1>
             <hr class="hr-light">
-            <h6 class="mb-4">Simply said, Chores connects you with the right Tasker to handle that chore.</h6>
-            <a class="btn btn-default">Top Taksers</a>
-            <a class="btn btn-outline-success">Common Chores</a>
+            <h6 class="mb-4 h3 mt-5">Simply said, Chores connects you with the right Tasker to handle that chore.</h6>
           </div>
         </div>
         <!--Grid row-->
