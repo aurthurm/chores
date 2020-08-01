@@ -24,3 +24,22 @@ module.exports = {
 		}
 	}
 };
+
+
+
+
+// module.exports = {
+//   baseUrl: process.env.NODE_ENV === 'production'
+//     ? '/static/'
+//     : '/',
+//   outputDir: '<PROJECT_BASE_DIR>/static',
+//   indexPath: '../templates/index.html',
+//   filenameHashing: false,
+//   devServer: {
+//     proxy: {
+//       '/api': {
+//         target: 'http://localhost:8000'
+//       }
+//     }
+//   },
+// }
